@@ -1,0 +1,21 @@
+======================================================================
+RADAR-X FORENSIC INCIDENT REPORT
+======================================================================
+
+Incident ID: INC-20260113_105255
+Detection Time: 2026-01-13 10:52:55
+Response Time: 0.00 seconds
+Threat Score: 75.0/100
+
+THREAT ANALYSIS:
+----------------------------------------------------------------------
+Honeypots Compromised: 3
+Total Honeypots: 8
+
+Indicators:
+  • Honeypot modified: decoy_4.txt
+  • Honeypot modified: decoy_6.txt
+  • Honeypot modified: decoy_7.txt
+
+MITIGATION ACTIONS TAKEN:
+----------------------------------------------------------------------

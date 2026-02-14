@@ -1,0 +1,105 @@
+{
+  "incident_id": "INC_20260112_173930",
+  "status": "CONTAINED",
+  "total_response_time": 0.917644,
+  "detection_data": {
+    "threat_detected": true,
+    "threat_level": "CRITICAL",
+    "pid": 12345,
+    "process_name": "ransomware_simulator.exe",
+    "detection_time": "2026-01-12T17:39:30.385171",
+    "indicators": {
+      "high_entropy": "False",
+      "file_discovery": true,
+      "shadow_copy_deletion": true,
+      "honeypot_hit": true,
+      "cpu_spike": true
+    }
+  },
+  "attack_analysis": {
+    "detected_techniques": [
+      "T1490",
+      "T1083"
+    ],
+    "current_stage": 7,
+    "urgency": "CRITICAL",
+    "predictions": {
+      "current_stage": 7,
+      "current_technique": {
+        "id": "T1083",
+        "name": "File and Directory Discovery",
+        "stage": 6,
+        "timestamp": "2026-01-12T17:39:30.385683",
+        "description": "Discovery - Enumerate files for encryption"
+      },
+      "predicted_techniques": [
+        {
+          "id": "T1490",
+          "name": "Inhibit System Recovery",
+          "stage": 7,
+          "description": "Impact - Delete shadow copies/backups"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "stage": 8,
+          "description": "Impact - Encrypt user files"
+        }
+      ],
+      "confidence": 0.95,
+      "recommended_actions": [
+        "Kill suspicious processes immediately",
+        "CRITICAL: Lock all sensitive folders NOW",
+        "Protect backup systems immediately",
+        "Isolate system from network",
+        "URGENT: Block access to shadow copies"
+      ],
+      "urgency": "CRITICAL"
+    }
+  },
+  "mitigation_result": {
+    "timestamp": "2026-01-12T17:39:30.386687",
+    "threat_id": "INC_20260112_173930",
+    "actions_taken": [
+      {
+        "action": "KILL_PROCESS",
+        "timestamp": "2026-01-12T17:39:30.386687",
+        "success": true,
+        "details": "Process not found or already terminated"
+      },
+      {
+        "action": "LOCK_FOLDERS",
+        "timestamp": "2026-01-12T17:39:30.386687",
+        "locked_folders": [
+          "C:\\Users\\Rimjhim\\Documents",
+          "C:\\Users\\Rimjhim\\Desktop",
+          "C:\\Users\\Rimjhim\\Videos",
+          "C:\\Users\\Rimjhim\\Downloads"
+        ],
+        "success": true,
+        "details": "Locked 4 folders"
+      },
+      {
+        "action": "NETWORK_ISOLATION",
+        "timestamp": "2026-01-12T17:39:30.490352",
+        "success": true,
+        "details": "Network interfaces disabled"
+      },
+      {
+        "action": "BACKUP_RESTORE",
+        "timestamp": "2026-01-12T17:39:31.289760",
+        "restored_files": 0,
+        "success": false,
+        "details": "No backup directory found"
+      }
+    ],
+    "status": "SUCCESS",
+    "response_time_seconds": 0.903073
+  },
+  "reports": {
+    "executive": "\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551           RADAR-X INCIDENT REPORT - EXECUTIVE SUMMARY            \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\nINCIDENT OVERVIEW\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nDetection Time:     2026-01-12T17:39:30.385171\nThreat Type:        Ransomware Attack\nResponse Time:      0.90 seconds\nStatus:             CONTAINED\n\nBUSINESS IMPACT\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u2022 Files at Risk:    0 files identified\n\u2022 Downtime:         Minimal (< 1 seconds)\n\u2022 Data Loss:        PREVENTED by automated response\n\u2022 Financial Impact: Estimated $0 (attack stopped pre-encryption)\n\nKEY ACTIONS TAKEN\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n1. \u2713 Kill Process\n2. \u2713 Lock Folders\n3. \u2713 Network Isolation\n4. \u2717 Backup Restore\n\nRECOMMENDATIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u2022 Continue enhanced monitoring for 48 hours\n\u2022 Review security awareness training for staff\n\u2022 Update incident response procedures with lessons learned\n\u2022 No ransom payment required - attack prevented\n\nCONCLUSION\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nRADAR-X successfully detected and neutralized the ransomware attack\nbefore any data encryption occurred. The automated response system\ncontained the threat in under 1 seconds, preventing\nbusiness disruption and financial loss.\n\nReport Generated: 2026-01-12 17:39:31\n",
+    "technical": "\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551         RADAR-X INCIDENT REPORT - TECHNICAL ANALYSIS             \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\nINCIDENT DETAILS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nIncident ID:        INC_20260112_173930\nDetection Time:     2026-01-12T17:39:30.385171\nThreat Classification: Ransomware\nSeverity:           CRITICAL\n\nINDICATORS OF COMPROMISE (IOCs)\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u2022 Process ID:       12345\n\u2022 Process Name:     ransomware_simulator.exe\n\u2022 File Entropy:     N/A\n\u2022 CPU Anomaly:      True\n\u2022 Honeypot Trigger: True\n\nATTACK CHAIN ANALYSIS (MITRE ATT&CK)\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n1. Inhibit System Recovery (T1490)\n   Stage: 7 | Time: 2026-01-12T17:39:30.385683\n2. File and Directory Discovery (T1083)\n   Stage: 6 | Time: 2026-01-12T17:39:30.385683\n\nAUTOMATED RESPONSE ACTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\n[SUCCESS] KILL_PROCESS\n  \u2514\u2500 Process not found or already terminated\n\n[SUCCESS] LOCK_FOLDERS\n  \u2514\u2500 Locked 4 folders\n\n[SUCCESS] NETWORK_ISOLATION\n  \u2514\u2500 Network interfaces disabled\n\n[FAILED] BACKUP_RESTORE\n  \u2514\u2500 No backup directory found\n\nFORENSIC ARTIFACTS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u2022 Detection Logs:   data/logs/detections/\n\u2022 Mitigation Logs:  data/logs/mitigation/\n\u2022 System Snapshots: data/logs/system/\n\u2022 Honeypot Logs:    data/logs/honeypot/\n\nREMEDIATION STEPS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n1. Verify all malicious processes terminated\n2. Restore folder permissions from read-only\n3. Re-enable network connectivity after validation\n4. Run full system scan for persistence mechanisms\n5. Update detection signatures with new IOCs\n6. Monitor for 48 hours for reinfection attempts\n\nReport Generated: 2026-01-12 17:39:31\nAnalyst: RADAR-X AI Forensics Engine v1.0\n",
+    "explanation": "\nWhat Happened:\n--------------\nAt 2026-01-12T17:39:30.385171, RADAR-X detected suspicious\nactivity on your system that matched the behavior of ransomware - malicious\nsoftware that encrypts your files and demands payment.\n\nWhat RADAR-X Did:\n-----------------\nWithin 0.903073 seconds, the system:\n1. Stopped the suspicious program from running\n2. Protected your important folders from being changed\n3. Disconnected the affected system from the network to prevent spread\n4. Prepared your backup files for recovery if needed\n\nThe Result:\n-----------\n\u2713 No files were encrypted\n\u2713 No data was lost\n\u2713 The attack was stopped before it could cause damage\n\u2713 Your systems are safe and protected\n\nWhat This Means:\n----------------\nYou do NOT need to pay any ransom. The attack was prevented before it could\ndo any harm. This is exactly what RADAR-X was designed to do - catch attacks\nbefore they cause damage, not after.\n\nWhat You Should Do:\n-------------------\n1. Review this report with your IT security team\n2. Continue normal operations - systems are safe\n3. Keep RADAR-X protection active\n4. Consider additional security training if the attack came through email\n\nQuestions? Contact your security team or review the detailed technical\nreport for more information.\n"
+  },
+  "target_met": true
+}

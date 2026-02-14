@@ -1,0 +1,3 @@
+@echo off
+echo Starting RADAR-X backend (IntegratedBackend)...
+python -c "from integrated_system import IntegratedBackend; b=IntegratedBackend(); b.start(); b.monitoring_loop()"

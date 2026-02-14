@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RADAR-X UI</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🛡️ RADAR-X Frontend</h1>
+    <div id="controls">
+      <button id="refresh">Refresh</button>
+      <label><input id="autoRefresh" type="checkbox"> Auto (5s)</label>
+    </div>
+  </header>
+
+  <main>
+    <section id="status">
+      <h2>System Status</h2>
+      <pre id="statusJson">Loading...</pre>
+    </section>
+
+    <section id="alerts">
+      <h2>Recent Alerts</h2>
+      <ul id="alertsList"></ul>
+    </section>
+
+    <section id="fl">
+      <h2>Federated Learning Rounds</h2>
+      <ul id="flList"></ul>
+    </section>
+
+    <section id="honeypots">
+      <h2>Honeypot Registry</h2>
+      <pre id="honeypotsJson">Loading...</pre>
+    </section>
+  </main>
+
+  <footer>
+    <small>API served at <code>/api/*</code>. Make sure backend is running.</small>
+  </footer>
+</body>
+</html>

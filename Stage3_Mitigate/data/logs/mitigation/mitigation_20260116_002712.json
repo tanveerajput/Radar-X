@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-01-16T00:26:55.712417",
+  "threat_id": "INC_20260116_002655",
+  "actions_taken": [
+    {
+      "action": "KILL_PROCESS",
+      "timestamp": "2026-01-16T00:26:55.712422",
+      "success": true,
+      "details": "Process not found or already terminated"
+    },
+    {
+      "action": "LOCK_FOLDERS",
+      "timestamp": "2026-01-16T00:26:55.712844",
+      "locked_folders": [
+        "C:\\Users\\parvo\\Documents",
+        "C:\\Users\\parvo\\Desktop",
+        "C:\\Users\\parvo\\Pictures",
+        "C:\\Users\\parvo\\Videos",
+        "C:\\Users\\parvo\\Downloads"
+      ],
+      "success": true,
+      "details": "Locked 5 folders"
+    },
+    {
+      "action": "NETWORK_ISOLATION",
+      "timestamp": "2026-01-16T00:27:11.191675",
+      "success": true,
+      "details": "Network interfaces disabled"
+    },
+    {
+      "action": "BACKUP_RESTORE",
+      "timestamp": "2026-01-16T00:27:12.238084",
+      "restored_files": 0,
+      "success": false,
+      "details": "No backup directory found"
+    }
+  ],
+  "status": "SUCCESS",
+  "response_time_seconds": 16.525788
+}

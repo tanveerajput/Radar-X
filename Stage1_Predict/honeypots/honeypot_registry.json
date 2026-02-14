@@ -1,0 +1,66 @@
+{
+  "honeypots\\passwords.txt": {
+    "filename": "passwords.txt",
+    "created": "2026-01-12T23:26:52.748251",
+    "original_hash": "395b3041fd33f324823aa4a18bdad277867fc42f53f2583389e3874f07124132",
+    "size": 35,
+    "accessed": false,
+    "modified": false
+  },
+  "honeypots\\financial_data.xlsx": {
+    "filename": "financial_data.xlsx",
+    "created": "2026-01-12T23:26:52.750131",
+    "original_hash": "c8eaa8e6cf537f4a4d33e57617703411eade8345cf710b7313530595a28971b9",
+    "size": 104,
+    "accessed": false,
+    "modified": false
+  },
+  "honeypots\\backup_keys.txt": {
+    "filename": "backup_keys.txt",
+    "created": "2026-01-12T23:26:52.764741",
+    "original_hash": "691a9819d959625917ea7765caf232d15c91547eff206b874c24054cba6564ef",
+    "size": 49,
+    "accessed": false,
+    "modified": false
+  },
+  "honeypots\\client_database.db": {
+    "filename": "client_database.db",
+    "created": "2026-01-12T23:26:52.768351",
+    "original_hash": "d0b2268faaf802b87ce699ca4e719e8f7a264a46056832f71d0a53df6696d056",
+    "size": 213,
+    "accessed": false,
+    "modified": false
+  },
+  "honeypots\\tax_returns_2024.pdf": {
+    "filename": "tax_returns_2024.pdf",
+    "created": "2026-01-12T23:26:52.770974",
+    "original_hash": "16d0da339a1c5d60a3dc363a9ec0072fc6d4566b83489854fe3a96096ddfb23e",
+    "size": 308,
+    "accessed": false,
+    "modified": false
+  },
+  "honeypots\\credit_cards.csv": {
+    "filename": "credit_cards.csv",
+    "created": "2026-01-12T23:26:52.773060",
+    "original_hash": "f99c11f439087217dd7b8ded8b6417e497df3a352aab0fe91e93c4e7ced0064b",
+    "size": 53,
+    "accessed": false,
+    "modified": false
+  },
+  "honeypots\\bitcoin_wallet.dat": {
+    "filename": "bitcoin_wallet.dat",
+    "created": "2026-01-12T23:26:52.787563",
+    "original_hash": "cd79803a11c6e7e180532bb3adc26aeee97c98e2b3483cfb099da5a5ba1c1d04",
+    "size": 154,
+    "accessed": false,
+    "modified": false
+  },
+  "honeypots\\medical_records.docx": {
+    "filename": "medical_records.docx",
+    "created": "2026-01-12T23:26:52.789295",
+    "original_hash": "21b81af04a804f0e79930ff0489901e10593bc6a4c4482896fa1368d08bbeae9",
+    "size": 254,
+    "accessed": false,
+    "modified": false
+  }
+}

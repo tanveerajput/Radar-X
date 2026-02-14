@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-01-12T23:41:33.950517",
+  "threat_id": "INC_20260112_234133",
+  "actions_taken": [
+    {
+      "action": "KILL_PROCESS",
+      "timestamp": "2026-01-12T23:41:33.950517",
+      "success": true,
+      "details": "Process not found or already terminated"
+    },
+    {
+      "action": "LOCK_FOLDERS",
+      "timestamp": "2026-01-12T23:41:33.950517",
+      "locked_folders": [
+        "C:\\Users\\Rimjhim\\Documents",
+        "C:\\Users\\Rimjhim\\Desktop",
+        "C:\\Users\\Rimjhim\\Videos",
+        "C:\\Users\\Rimjhim\\Downloads"
+      ],
+      "success": true,
+      "details": "Locked 4 folders"
+    },
+    {
+      "action": "NETWORK_ISOLATION",
+      "timestamp": "2026-01-12T23:41:34.070850",
+      "success": true,
+      "details": "Network interfaces disabled"
+    },
+    {
+      "action": "BACKUP_RESTORE",
+      "timestamp": "2026-01-12T23:41:34.786856",
+      "restored_files": 0,
+      "success": false,
+      "details": "No backup directory found"
+    }
+  ],
+  "status": "SUCCESS",
+  "response_time_seconds": 0.836339
+}

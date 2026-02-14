@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+aiofiles
+psutil
+scikit-learn
+plotly
+pandas
+streamlit
