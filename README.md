@@ -225,14 +225,6 @@ Radar-X/
 
 ---
 
-## 👩‍💻 Author
-
-**Tanvee Rajput**  
-B.Tech | Cybersecurity Enthusiast  
-Hackathon | Interested in **Cybersecurity
-
----
-
 ## 📜 Disclaimer
 
 This project is developed for **academic, research, and learning purposes**.  
